@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@xml/border" >
+    <RelativeLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="@dimen/title_bar_size"
+    	android:background="@color/black">
+        <Button
+            android:id="@+id/cmt_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel_button"
+            android:textColor="@color/white"
+            android:background="@color/black"
+            android:textSize="@dimen/text_size"
+            android:paddingLeft="@dimen/padding_margin"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comment_button"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size"
+            android:layout_centerInParent="true"
+            />
+        <Button
+            android:id="@+id/cmt_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/post_button"
+            android:textColor="@color/white"
+            android:background="@color/black"
+            android:textSize="@dimen/text_size"
+            android:paddingRight="@dimen/padding_margin"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <EditText 
+        android:id="@+id/cmt_txt"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/yellow"
+        android:gravity="top"
+        android:padding="@dimen/padding_margin"
+        android:inputType="text"/>
+
+</LinearLayout>

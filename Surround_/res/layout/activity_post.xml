@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingTop="3dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="3dp"
+    android:background="#F0E68C"	
+    >
+    <EditText
+        android:id="@+id/post_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/post_title_size"
+        android:ems="20"
+        android:gravity="center"
+        android:background="@xml/border"
+        android:hint="@string/title_text" >
+        <requestFocus />
+    </EditText>
+    
+    <com.project.surround.LineEditText
+        android:id="@+id/post_content"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/post_title"
+        android:layout_above="@+id/dateLayout"
+        android:gravity="top"
+        android:background="@xml/border"
+        android:paddingLeft="@dimen/padding_margin"
+    	android:paddingTop="@dimen/padding_margin"
+    	android:paddingRight="@dimen/padding_margin"
+    	android:paddingBottom="@dimen/padding_margin"
+        android:hint="@string/content_text"
+         />
+
+    <LinearLayout
+        android:id="@+id/post_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayout"
+        android:orientation="horizontal"
+        android:background="@xml/border">
+        
+		<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center_vertical"
+		    android:paddingLeft="@dimen/padding_margin"
+		    android:paddingRight="@dimen/padding_margin"
+		    android:textSize="20sp"
+		    android:text="@string/class_text"
+		    />
+
+		<Spinner
+		    android:id="@+id/post_spinner"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:entries="@array/post_spinner" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="5dp"
+        android:background="@xml/border">
+		<Button
+		    android:id="@+id/post_send"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="@string/post_button"
+		    android:layout_alignParentRight="true"
+		    />
+        <Button
+            android:id="@+id/post_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/post_send"
+            android:text="@string/cancel_button" />
+    </RelativeLayout>
+
+</RelativeLayout>
