@@ -1,1 +1,1 @@
-We are zhazha.
+we are zhazhas.
